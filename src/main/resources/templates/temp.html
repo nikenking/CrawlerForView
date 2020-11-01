@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.10.2.min.js">
+    </script>
+    <script>
+        $(function() {
+            $("#t1").click(function() {
+                $("#sendMsg").val($("#msgBox").val())
+                alert($("#sendMsg").val())
+            })
+        })
+    </script>
+</head>
+<style type="text/css">
+    body {
+        background-color: #23A7F2;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        outline: none;
+        text-decoration: none;
+        border: none;
+        list-style: none;
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div {
+        display: flex;
+    }
+
+    .h1 {
+        background-color: #333333;
+        width: 100%;
+        height: 100px;
+        align-items: center;
+    }
+
+    .h2 {
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 50px;
+        background-color: #F88068;
+        border-radius: 10px;
+        margin: 0 30px 0 10px
+    }
+
+    .h3 {
+        width: 100%;
+        height: 800px;
+        background-color: #252526;
+        justify-content: flex-start;
+    }
+
+    #msgBox {
+        resize: none;
+        border: 0;
+        border-radius: 5px;
+        background-color: rgba(241, 241, 241, .98);
+        width: 100%;
+        height: 200px;
+        padding: 10px;
+    }
+</style>
+
+
+<body>
+<div class="h1">
+    <div class="h2">
+        <form id="t1" action="@{/save}">
+            ["",""]
+        </form>
+        <input type="text" id="sendMsg" name="msg" hidden="hidden" />
+    </div>
+</div>
+<div class="h3">
+    <textarea id="msgBox" placeholder="输入要转换文本"></textarea>
+</div>
+</body>
+
+<script>
+</script>
+
+</html>
